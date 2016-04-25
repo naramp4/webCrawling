@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jsoup-1.9.1">
+    <CLASSES>
+      <root url="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/lib/ext/jsoup-1.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="jsoup-1.9.1">
+    <archive path="/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/lib/ext/jsoup-1.9.1.jar" />
+  </library>
+  <library name="mysql-connector-java-5.1.38-bin">
+    <archive path="/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home/lib/ext/mysql-connector-java-5.1.38-bin.jar" />
+  </library>
+  <library name="Python 2.7.10 (/usr/bin/python) interpreter library" />
+  <library name="Python 2.7.10 (/usr/bin/python2.7) interpreter library" />
+</eclipse-userlibraries>
+
