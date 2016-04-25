@@ -1,4 +1,4 @@
-package WebCrawling.kr.ac.jeju.webcrawling;
+package WebCrawling;
 
 import java.io.IOException;
 import java.sql.SQLException;

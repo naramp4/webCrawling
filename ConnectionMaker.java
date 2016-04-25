@@ -1,4 +1,4 @@
-package WebCrawling.kr.ac.jeju.webcrawling;
+package WebCrawling;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

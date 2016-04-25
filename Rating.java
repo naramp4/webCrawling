@@ -1,4 +1,4 @@
-package WebCrawling.kr.ac.jeju.webcrawling;
+package WebCrawling;
 
 /**
  * Created by sw on 2016. 4. 21..

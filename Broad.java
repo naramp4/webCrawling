@@ -1,4 +1,4 @@
-package WebCrawling.kr.ac.jeju.webcrawling;
+package WebCrawling;
 
 import org.jsoup.select.Elements;
 
@@ -10,30 +10,32 @@ import java.util.regex.Pattern;
 /**
  * Created by sw on 2016. 4. 20..
  */
-public class Program{
+public class Broad {
 
 
-    public String[] getProgram() throws IOException {
+    public String[] getBroad() throws IOException {
 
         ElementsClass getEle = new ElementsClass();
-        Elements ele = getEle.getElements(".tb_txt");
+        Elements ele = getEle.getElements(".tb_txt_center");
 
         ArrayList al = new ArrayList<StringBuffer>();
         StringBuffer sb = new StringBuffer();
 
         String[] st = new String[20];
 
-        for (int i = 0; i < ele.size(); i++) {
-            sb.append(ele.get(i)).append(" ");
+        int num = -1;
+        for (int i = 0; i < ele.size() / 2; i++) {
+            num += 2;
+            sb.append(ele.get(num)).append(" ");
 
         }
 
-        Pattern p = Pattern.compile("[A-Z0-9가-힣]{1,20}\\({0,1}[A-Z가-힣]{1,20}\\){0,1}");
+        Pattern p = Pattern.compile("[K*B*S*M*C*1*2]{3,5}");
         Matcher m = p.matcher(sb);
-
         while (m.find()) {
             al.add(m.group());
         }
+
         for(int i=0; i<al.size();i++){
             st[i] = (String)al.get(i);
         }
