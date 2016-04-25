@@ -22,7 +22,7 @@ public class RatingNum {
         ArrayList al = new ArrayList<StringBuffer>();
         StringBuffer sb = new StringBuffer();
         Float[] floats = new Float[20];
-        
+
 
         for (int i = 0; i < ele.size(); i++) {
             sb.append(ele.get(i)).append(" ");
