@@ -1,4 +1,4 @@
-package WebCrawling;
+package WebCrawling.kr.ac.jeju.webcrawling;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.Jsoup;

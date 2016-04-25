@@ -1,4 +1,4 @@
-package WebCrawling;
+package WebCrawling.kr.ac.jeju.webcrawling;
 
 import org.jsoup.select.Elements;
 
@@ -10,34 +10,40 @@ import java.util.regex.Pattern;
 /**
  * Created by sw on 2016. 4. 20..
  */
-public class Program{
+public class RatingNum {
 
 
-    public String[] getProgram() throws IOException {
+    public Float[] getRating() throws IOException {
 
         ElementsClass getEle = new ElementsClass();
-        Elements ele = getEle.getElements(".tb_txt");
+        Elements ele = getEle.getElements(".percent");
+        Elements ele2 = getEle.getElements(".percent_g");
 
         ArrayList al = new ArrayList<StringBuffer>();
         StringBuffer sb = new StringBuffer();
-
-        String[] st = new String[20];
+        Float[] floats = new Float[20];
 
         for (int i = 0; i < ele.size(); i++) {
             sb.append(ele.get(i)).append(" ");
-
         }
 
-        Pattern p = Pattern.compile("[A-Z0-9가-힣]{1,20}\\({0,1}[A-Z가-힣]{1,20}\\){0,1}");
-        Matcher m = p.matcher(sb);
+        for (int i = 0; i < ele2.size(); i++) {
+            sb.append(ele2.get(i)).append(" ");
+        }
 
+
+        Pattern p = Pattern.compile("[0-9]{1,2}.[0-9]");
+        Matcher m = p.matcher(sb);
         while (m.find()) {
             al.add(m.group());
         }
+
         for(int i=0; i<al.size();i++){
-            st[i] = (String)al.get(i);
+            floats[i] = Float.parseFloat((String)al.get(i));
         }
-        return st;
+
+
+        return floats;
     }
 
 
